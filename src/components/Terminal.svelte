@@ -227,4 +227,21 @@
       }
     }
   }
+  @keyframes typing-2 {
+    0% {
+      width: 0%;
+      border-right: 0.15em solid white;
+    }
+    1% {
+      opacity: 1;
+    }
+    40% {
+      width: 0%;
+      border-right: 0.15em solid white;
+    }
+    100% {
+      opacity: 1;
+      width: 40%;
+    }
+  }
 </style>
