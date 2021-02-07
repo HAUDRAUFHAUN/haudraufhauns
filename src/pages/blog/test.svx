@@ -1,0 +1,7 @@
+---
+title: "Test"
+description: "A boring test"
+layout: post
+---
+
+This is a stupid test post.

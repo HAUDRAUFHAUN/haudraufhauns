@@ -1,0 +1,285 @@
+---
+title: "Jekyll & GitHub Pages Tutorial"
+description: "Entwickeln und kostenloses Hosten einer Website mithilfe von GitHubPages und Jekyll"
+layout: post
+---
+
+Moin 👋,
+
+in diesem Blogpost soll es um den Bau einer einfachen Website mit Jekyll und das kostenlose Hosten dieser Seite mit <code class="dark:text-white">GitHub-Pages</code>.
+
+<h3 class="dark:text-white"> Vorrausetzungen </h3>
+
+Wenn du diesem Tutorial folgen willst, dannn gehe bitte sicher, dass du schon HTML beherrschst, da ich hier nicht alles darüber erklären kann. Falls du noch nicht HTML beherrschst, ist dieses Tutorial empfehlenswert: <a class="dark:text-white" href="https://www.youtube.com/watch?v=qmTNnZCDJY0">Eigene Website mit HTML und CSS bauen</a>
+
+Zudem erfülle bitte folgende Vorraussetzungen:
+
+- habe auf deinem PC einen Codeeditor installiert, ich persönlich nutze VS Code, <a class="dark:text-white" href="https://code.visualstudio.com/">hier</a> downloadbar (man kann zwar reintheoretisch auch den Standard Windowseditor benutzen was allerdings etwas umständlich ist)
+- installiere <a class="dark:text-white" href="https://git-scm.com/">Git</a> und <a class="dark:text-white" href="https://www.ruby-lang.org/de/downloads/">Ruby</a> auf deinem PC 🖥
+- nachdem du Ruby installiert hast, führe <code class="dark:text-white">gem install bundler jekyll</code> in deinem Terminal aus
+
+Du erfüllst alle Vorrausetzungen? Dann lass uns direkt starten 🚀
+
+<h2 class="dark:text-white"> Erstellen eines neuen Projektes </h2>
+
+Um mit dem Programmieren zu beginnen, navigiere zunächst in einem Terminal in den Ordner, in dem du das Projekt erstellen möchtest. Dorthin navigiert, führe in deinem Terminal zum erstellen des Projektes den Befehl
+
+```bash
+jekyll new PROJEKTNAME
+```
+
+aus. Damit wird dein Projekt erstellt.
+
+Navigiere nun in den Projekordner mit
+
+```bash
+cd PROJEKTNAME
+```
+
+und führe den Befehl
+
+```bash
+bundle exec jekyll serve
+```
+
+aus. Wenn du nun in deinem Webbrowser <a class="dark:text-white" href="localhost:4000">localhost:4000</a> eingibst, kannst du die Standardseite, die von Jekyll automatisch generiert wurde, sehen.
+
+<h2 class="dark:text-white"> Eigene Inhalte erstellen </h2>
+
+Nun wollen wir aber nicht die Jekyll-Defaultwebsite, sondern eine eigene Website entwickeln. Dazu stoppen wir zunächst den Server und löschen dann alles bis auf die Dateien <code class="dark:text-white">\_config.yml</code>, <code class="dark:text-white">Gemfile</code>, <code class="dark:text-white">Gemfile.lock</code>, <code class="dark:text-white">.gitignore</code> und <code class="dark:text-white">404.html</code>.
+
+Daraufhin ersetzen wir den Inhalt der Datei <code class="dark:text-white">\_config.yml</code> durch folgendes:
+
+```yml
+title: Your awesome title
+baseurl: ""
+url: ""
+
+plugins:
+  - jekyll-feed
+```
+
+Dann erstellen wir eine Datei mit dem Namen <code class="dark:text-white">index.html</code>, die folgendermaßen aussieht:
+
+```html
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hallo Jekyll</title>
+  </head>
+  <body>
+    <h1>Hallo Welt</h1>
+  </body>
+</html>
+```
+
+<br>
+Wenn wir nun mit <code class="dark:text-white">bundle exec jekyll serve</code> die Seite neu starten, bekommen wir folgendes zu sehen:
+
+<img alt="Result Screenshot no. 1" src="/images/jekyll-tutorial/screenshot1.jpg" />
+
+Das vorher programmierte <code class="dark:text-white">Hallo Welt</code> erscheint! Wenn wir das hier geschafft haben können wir die Seite nach unseren Wünschen und Bedürfnissen mit <code class="dark:text-white">HTML</code> ; <code class="dark:text-white">CSS</code> und <code class="dark:text-white">JavaScript</code> gestalten.
+
+<h2 class="dark:text-white">Layouts und Includes in Jekyll 🔃</h2>
+Bisher haben wir ein einfaches <code class="dark:text-white">Hallo Welt</code> auf der Website erscheinen lassen. Dies sah 1. nicht schön aus und zweitens ist eine richtige Website ja auch etwas anderes...
+
+Meistens sind Websites ja so aufgebaut:
+
+- oben: Navigationsleiste
+- mitte: Inhalt
+- unten: Fußzeile/Footer mit &copy; und Link zu Impressum
+
+Wenn unsere Website mehrere Seiten beinhaltet, dann müssten wir rein theoretisch die Navigation und den Footer in jeder <code class="dark:text-white">HTML</code> Datei neu schreiben, was natürlich umständlich ist und bei Änderungen and diesen Komponenten schnell unübersichtlich wird, da wir die Komponente in jeder Datei dann ändern müssen.
+Doch Jekyll nimmt uns diese Arbeit mit den sogenannten <code class="dark:text-white">Includes</code> und <code class="dark:text-white">Layouts</code> ab:
+
+<h3 class="dark:text-white">Includes</h3>
+Statt in jeder Datei z.B. deie Naviation neu zu programmieren, können wir die Navbar in <b>einer</b> Datei designen und müsssen diese dann lediglich in den anderen <code class="dark:text-white">HTML</code> Dateien importieren. Der Vorteil liegt auf der Hand: Wir ändern die auf jeder Seite vorhandene Komponente wie die Navigationsbar nur in einer Datei und müssen nicht in jeder Datei diese neu programmieren. Und so gehen wir dabei vor:
+
+1. Wir erstellen einen Ordner mit dem Namen <code class="dark:text-white">\_includes</code>. Dies ist wichtig, da Jekyll nur aus einem Ordner mit <b>exakt</b> diesem Namen importieren kann
+2. Erstelle eine Datei mit dem Namen <code class="dark:text-white">\_navbar.html</code> in dem in 1. erstellten Ordner, hier werden wir die Navigationsleiste unserer Seite erstellen.
+3. Bearbeite nun deine <code class="dark:text-white">index.html</code> so, dass sie folgendermaßen aussieht:
+
+```html
+---
+permalink: /
+---
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
+    <title>Your awesome title</title>
+  </head>
+  <body>
+    <section class="section" style="margin-top: 0.2rem; margin-bottom: 1.5rem;">
+      <div class="container"></div>
+    </section>
+    <br />
+    <br />
+  </body>
+</html>
+```
+
+Damit importierst du <a href="https://bulma.io/" class="dark:text-white">Bulma</a>, ein <code class="dark:text-white">CSS</code> Framework, das ich hier nutze, da es vorgefertigte Komponenten wie Navbars bereitstellt (das macht die Arbeit am Anfang deutlich leichter). Zudem definiertst du mit <code class="dark:text-white">permalink: /</code> den Link, mit dem <code class="dark:text-white">index.html</code> aufgerufen wird.
+
+4. Nun programmieren wir die Navbar: dazu begeben wir uns zurück in die Datei <code class="dark:text-white">\_navbar.html</code> und programmieren folgendes als Navbar:
+
+```html
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item">
+      Titel
+      </a>
+
+      <a
+        role="button"
+        class="navbar-burger burger"
+        aria-label="menu"
+        aria-expanded="false"
+        data-target="navbarBasicExample"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          Home
+        </a>
+        </div>
+        <div class="navbar-end">
+          <a class="navbar-item" href="/impressum/">
+            Impressum
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+```
+
+Du kannst auch deine eigene Navbar entwickeln, die (in englisch verfasste) Dokumentation dazu findest du <a href="https://bulma.io/documentation/components/navbar/" class="dark:text-white">hier</a>.
+
+5. Nun wollen wir die Navbar in unser <code class="dark:text-white">index.html</code> Datei importieren: Dazu öffnen wir <code class="dark:text-white">index.html</code> und fügen über
+
+```html
+<section class="section"></section>
+```
+
+die Zeile
+
+```css
+{% include _navbar.html %}
+```
+
+hinzu, die dann die Navbar importiert. Wenn wir uns nun im Browser unsere Seite neu laden können wir in etwa folgendes sehen:
+
+<img alt="Result Screenshot no. 2" src="/images/jekyll-tutorial/screenshot2.jpg" />
+
+Zu sehen ist die von uns programmierte Navigationsleiste🥳
+
+Nun kommen wir zur ersten Aufgabe für dich:
+
+Programmiere für die Website einen Footer(= Fußzeile) und importiere diesen mithilfe von <code class="dark:text-white">Includes</code> in die Datei <code class="dark:text-white">index.html</code>. Die Footer Komponente von <code class="dark:text-white">Bulma</code> kannst du <a class="dark:text-white" href="https://bulma.io/documentation/layout/footer/">hier</a> finden. Du kannst aber gerne auch einen eigenen Footer entwickeln.
+
+<h3 class="dark:text-white">Layouts</h3>
+<code class="dark:text-white">Layouts</code> sind gewissermaßen der Bruder der <code class="dark:text-white">Includes</code>, sie sind nämlich nicht nur wie die <code class="dark:text-white">Includes</code> eine Blaupause für eine Komponente der Seite, sondern eine Blaupause für die gesamte Seite (das Layout). Das tolle an <code class="dark:text-white">Layouts</code> ist, dass diese nicht nur für <code class="dark:text-white">HTML</code> Dateien funktionieren, sondern auch für <code class="dark:text-white">Markdown</code> verarbeiten können.
+
+Um eigene <code class="dark:text-white">Layouts</code> zu erstellen, müssen wir zunächst neben <code class="dark:text-white">\_includes</code> einen Ordner mit dem Namen <code class="dark:text-white">\_layouts</code> erstellen; in diesem Ordner werden wir unsere Layouts speichern.
+
+In dem gerade erstellten Ordner erstellen wir nun unser erstes Layout, indem wir eine Datei mit dem Namen <code class="dark:text-white">default.html</code> erstellen.
+Danach dürfte die Ordnerstruktur unseres Projektes so aussehen:
+
+<img alt="Ordnerstruktur des Projektes" src="/images/jekyll-tutorial/screenshot3.jpg" />
+
+Zunächst kopieren wir den gesamten Code unserer <code class="dark:text-white">index.html</code> in <code class="dark:text-white">default.html</code>.
+
+Daraufhin bearbeiten wir die Datei <code class="dark:text-white">default.html</code> so, dass sie folgendermaßen aussieht:
+
+```html
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
+    <title>Your awesome title</title>
+  </head>
+  <body>
+    {% include _navbar.html %}
+    <section class="section" style="margin-top: 0.2rem; margin-bottom: 1.5rem;">
+      <div class="container content">
+        <h1 class="title">{{page.title}}</h1>
+        <br />
+        {{content}}
+      </div>
+    </section>
+    <br />
+    <br />
+  </body>
+</ht
+```
+
+Nun bearbeiten wir die Datei <code class="dark:text-white">index.html</code> folgendermaßen:
+
+```html
+---
+permalink: /
+layout: default
+title: Home
+---
+
+<div class="content">Hier steht der Inhalt der Indexseite...</div>
+```
+
+Wenn wir uns nun unsere Ausgabe im Browser anschauen, können wir folgendes sehen:
+
+<img alt="Result Screenshot no. 4" src="/images/jekyll-tutorial/screenshot4.jpg" />
+
+Doch was genau haben wir hier gemacht?
+
+Wir haben zunächst in <code class="dark:text-white">default.html</code> ein Layout entwickelt, dass
+
+1. Die Navbar per <code class="dark:text-white">include</code> importiert (wenn du einen eigenen Footer entwickelt hast, solltest du diesen natürlich auch includen 😉)
+2. einen Ort definiert wo der Parameter <code class="dark:text-white">title</code>, also der Titel der jeweiligen Seite angezeigt wird; in diesem Falle ist dies logischerweise ein <code class="dark:text-white">h1</code> Tag
+3. haben wir die Stelle definiert, an der der Inhalt (==<code class="dark:text-white">content</code>) unserer Seite steht
+4. haben wir in dem Header von <code class="dark:text-white">index.html</code> den <code class="dark:text-white">title</code> sowie das <code class="dark:text-white">layout</code> definiert
+5. haben wir in der <code class="dark:text-white">index.html</code> in dem <code class="dark:text-white"><div></code> mit der Klasse <code class="dark:text-white">content</code> (die wir im Layout definiert haben) unsere Inhalte erstellt.
+
+<b>Aufgabe</b>: Erstelle nun das Impressum
+
+_Tips:_
+
+- Da wir in der Navbar schon als Link für das Impressum /impressum/ angeben haben, ist es naheliegend, dies auch als Permalink zu nutzen
+- erstelle deine <code class="dark:text-white">HTML</code> Datei für das Impressum im gleichen Ordner 📁 wie <code class="dark:text-white">index.html</code>
+
+<h2 class="dark:text-white">Kostenloses Hosting mit GitHub-Pages🔥</h2>
+<h3 class="dark:text-white">🚧 Wichtig! Lese diesen Abschnitt erst ganz genau durch, bevor du den beschriebenen Vorgang durchführst!🚧</h3>
+
+Wenn du nun (hoffentlich mit der Hilfe dieses Tutorials🙃) eine eigene Website mit <code class="dark:text-white">Jekyll</code> entwickelt hast und diese veröffentlichen möchtest, bietet sich <code class="dark:text-white">GitHub-Pages</code> als besonders elegante und kostenlose💵 Lösung an. Eigentlich ist <code class="dark:text-white">Github</code> eine Website zum Teilen von Open-Source Code, allerdings gibt es inzwischen tausende Features mehr. Eines dieser vielen Features ist das kostenlose Hosten von Jekyll-Webpages. Die einzige Vorraussetzung ist: besitze einen kostenlosen <a href="https://github.com/" class="dark:text-white">GitHub-Account</a>. Falls du noch keinen GitHub Account hast, aber dir einen speziell für <code class="dark:text-white">GitHub-Pages</code> erstellen willst, folgender Hinweis: Die Website bekommt standardmäßig <b>immer</b> folgende URL: <code class="dark:text-white">BENUTZERNAME.github.io</code>, wobei <code class="dark:text-white">BENUTZERNAME</code> dein GitHub Username ist. Man kann das zwar auch auf andere Domains "umprogrammieren", dies verursacht allerdings Extraaufwand und kann auch Kosten hervorrufen (vor allem bei dem eigenen Domainnamen, denn der muss in der Regel gekauf werden). Aus diesen Gründen sei geraten, sich einen guten GitHub-Username auszusuchen, da dieser Bestandteil der URL ist!
+
+Hast du deinen GitHub Account erstellt, kannst du auch schon direkt loslegen:
+
+Erstelle zunächst unter <a href="https://github.com/new" class="dark:text-white" target="_blank" rel="noopener">https://github.com/new</a> ein neues GitHub-Repository mit dem Namen <code class="dark:text-white">BENUTZERNAME.github.io</code>, wobei <code class="dark:text-white">BENUTZERNAME</code> dein <b>exakter</b> GitHub Benutzername sein muss!
+
+Wähle dann folgende Optionen aus:
+
+<img alt="Creating a new GitHub repository" src="/images/jekyll-tutorial/screenshot5.jpg" />
+
+Wenn du fertig bist, klicke auf <code class="dark:text-white">Create Repository</code> und erstelle damit das Repository. Nun solltest du in etwa folgendes zu Gesicht bekommen:
+
+<img alt="GitHub Repository" src="/images/jekyll-tutorial/screenshot6.jpg" />
+
+Jetzt musst du nur noch auf <code class="dark:text-white">uploading an existing file</code> klicken. Dort gelangst du dann zu einer Übersicht, wo du deine Projektdateien uploaden kannst. Diese werden dann von <code class="dark:text-white">GitHub Pages</code> automatisch zum hosten genutzt. Du kannst auch in Zukunft die Dateien auf GitHub verändern, löschen und neue Dateien erstellen. All dieser Vorgänge werden von <code class="dark:text-white">GitHub Pages</code> automatisch verarbeitet.

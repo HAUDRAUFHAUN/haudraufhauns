@@ -1,0 +1,130 @@
+/*
+-----------------------------------------------
+	syntax-highlighting [prism]
+-----------------------------------------------
+*/
+
+/*	colors --------------------------------- */
+
+@font-face {
+  font-family: FiraCode;
+  src: url(fonts/FiraCode-Regular.ttf);
+}
+
+pre[class*="language-"] {
+  --background: #111827;
+  --base: #f6fafd;
+  --comment: #696969;
+  --keyword: #007f8a;
+  --function: #f97316;
+  --string: #84cc16;
+  --number: #008000;
+  --tags: var(--function);
+  --important: var(--string);
+}
+
+/*	type-base ------------------------------ */
+code[class*="language-"],
+pre[class*="language-"] {
+  background: none;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  font: 1.7 FiraCode;
+  color: var(--base);
+  tab-size: 2;
+  -moz-tab-size: 2;
+  -webkit-hyphens: none;
+  hyphens: none;
+}
+
+/*	code-blocks ---------------------------- */
+pre[class*="language-"] {
+  overflow: auto;
+  padding: 1.5rem 2rem;
+  margin: 0.8rem 0 2.4rem;
+  min-width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 1px 1px 1px rgba(68, 68, 68, 0.12) inset;
+  white-space: normal;
+  display: block;
+  overflow-x: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: var(--background);
+}
+
+/*	tokens --------------------------------- */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--comment);
+}
+
+.token.punctuation {
+  color: var(--base);
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: var(--tags);
+}
+
+.token.boolean,
+.token.number {
+  color: var(--number);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: var(--string);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: var(--base);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: var(--function);
+}
+
+.token.keyword {
+  color: var(--keyword);
+}
+
+.token.regex,
+.token.important {
+  color: var(--important);
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+.token.entity {
+  cursor: help;
+}
