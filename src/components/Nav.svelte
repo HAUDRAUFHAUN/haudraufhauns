@@ -40,6 +40,7 @@
           <button
             class="right-0 absolute p-1 rounded-lg text-gray-600 dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600 fill-current"
             on:click={() => setTheme()}
+            aria-label="Change theme"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -80,6 +81,7 @@
           <div class="-m3-2">
             <button
               on:click={() => (hide = "false")}
+              aria-label="Toggle mobile menu"
               class="bg-white dark:bg-gray-800 rounded-md p-2 inline-flex items-center text-gray-400 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
             >
               <svg
@@ -101,6 +103,7 @@
           <button
             class="right-0 absolute p-1 mr-2 rounded-lg text-gray-600 dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600 fill-current"
             on:click={() => setTheme()}
+            aria-label="Change theme"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -136,6 +139,7 @@
               <button
                 type="button"
                 on:click={() => (hide = "true")}
+                aria-label="Toggle mobile menu"
                 class="bg-white dark:bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-red-500 dark:text-red-300 hover:text-red-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
               >
                 <span class="sr-only">Close main menu</span>
