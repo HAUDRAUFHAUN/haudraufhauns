@@ -1,6 +1,6 @@
 <div class="w-full mx-2 my-4">
   <div
-    class="coding inverse-toggle px-5 pt-4 shadow-xl text-gray-100 text-sm font-mono subpixel-antialiased 
+    class="coding inverse-toggle px-5 pt-4 shadow-xl text-gray-100 text-xs md:text-base lg:text-lg font-mono subpixel-antialiased 
                 bg-gray-800 dark:bg-gray-900 pb-6 rounded-lg leading-normal overflow-hidden"
   >
     <div class="top mb-2 flex">
@@ -30,9 +30,9 @@
     </div>
     <div class="mt-4 flex prompt-3">
       <div
-        class="pl-2 flex flex-row align-middle space-x-4 max-w-full flex-wrap"
+        class="pl-2 flex flex-col justify-center text-justify md:flex-row md:justify-start align-middle space-x-4 max-w-full flex-wrap"
       >
-        <div class="flex flex-row space-x-1">
+        <div class="flex flex-row space-y-1 md:space-x-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="text-white"
@@ -59,7 +59,7 @@
             HAUDRAUFHAUN</a
           >
         </div>
-        <div class="flex flex-row space-x-1">
+        <div class="flex flex-row space-y-1 md:space-x-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="text-blue-500"
@@ -86,7 +86,7 @@
             @haudraufhaun1</a
           >
         </div>
-        <div class="flex flex-row space-x-1">
+        <div class="flex flex-row space-y-1 md:space-x-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="text-red-500"
@@ -217,13 +217,13 @@
     }
   }
 
-  @media (max-width: 640px) {
-    @keyframes typewriter {
+  @screen sm {
+    @keyframes typing {
       0% {
         width: 0%;
       }
       100% {
-        width: 40%;
+        width: 100%;
       }
     }
   }
@@ -241,7 +241,7 @@
     }
     100% {
       opacity: 1;
-      width: 40%;
+      width: 100%;
     }
   }
 </style>
