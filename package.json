@@ -47,6 +47,7 @@
     "rollup-plugin-svelte-hot": "^0.11.1",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-workbox": "^5.2.1",
+    "routify-plugin-frontmatter": "^1.0.1",
     "spank": "^1.5.1",
     "spassr": "^2.2.0",
     "svelte": "^3.29.4",
@@ -55,7 +56,10 @@
     "tossr": "^1.3.1"
   },
   "routify": {
-    "extensions": "svelte,html,svx,md"
+    "extensions": "svelte,html,svx,md",
+    "plugins": {
+      "routify-plugin-frontmatter": {}
+    }
   },
   "spassr": {},
   "spank": {
