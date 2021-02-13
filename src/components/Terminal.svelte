@@ -30,7 +30,7 @@
     </div>
     <div class="mt-4 flex prompt-3">
       <div
-        class="pl-2 flex flex-col justify-center text-justify md:flex-row md:justify-start align-middle space-x-4 max-w-full flex-wrap"
+        class="pl-2 flex  justify-center text-justify md:justify-start align-middle space-x-4 max-w-full flex-wrap"
       >
         <div class="flex flex-row space-y-1 md:space-x-1">
           <svg
@@ -176,57 +176,16 @@
   }
 
   /* The typing effect */
+  /* mobile typing animation*/
   @keyframes typing {
     0% {
       width: 0%;
-      border-right: 0.15em solid white;
-    }
-    40% {
-      width: 0%;
     }
     100% {
-      width: 13%;
-    }
-  }
-  @keyframes typing-2 {
-    0% {
-      width: 0%;
-      border-right: 0.15em solid white;
-    }
-    1% {
-      opacity: 1;
-    }
-    40% {
-      width: 0%;
-      border-right: 0.15em solid white;
-    }
-    100% {
-      opacity: 1;
-      width: 13%;
+      width: 100%;
     }
   }
 
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from,
-    to {
-      border-color: transparent;
-    }
-    50% {
-      border-color: white;
-    }
-  }
-
-  @screen sm {
-    @keyframes typing {
-      0% {
-        width: 0%;
-      }
-      100% {
-        width: 100%;
-      }
-    }
-  }
   @keyframes typing-2 {
     0% {
       width: 0%;
@@ -242,6 +201,49 @@
     100% {
       opacity: 1;
       width: 100%;
+    }
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: white;
+    }
+  }
+
+  @screen md {
+    @keyframes typing {
+      0% {
+        width: 0%;
+        border-right: 0.15em solid white;
+      }
+      40% {
+        width: 0%;
+      }
+      100% {
+        width: 13%;
+      }
+    }
+    @keyframes typing-2 {
+      0% {
+        width: 0%;
+        border-right: 0.15em solid white;
+      }
+      1% {
+        opacity: 1;
+      }
+      40% {
+        width: 0%;
+        border-right: 0.15em solid white;
+      }
+      100% {
+        opacity: 1;
+        width: 13%;
+      }
     }
   }
 </style>
