@@ -2,7 +2,6 @@
   import { layout, url } from "@roxi/routify";
 
   let posts = $layout.children;
-  console.log(posts);
 </script>
 
 {#each posts as node}
