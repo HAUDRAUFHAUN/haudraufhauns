@@ -1,15 +1,14 @@
 <script>
-  let isDark = false;
+  import { darkTheme } from "@/store.js";
 
-  function setTheme() {
-    if (localStorage.theme === "dark") {
-      localStorage.theme = "light";
-      window.location.reload(true);
-      isDark = false;
-    } else localStorage.theme = "dark";
-    window.location.reload(true);
-    isDark = true;
+  function updateTheme() {
+    try {
+      darkTheme.update((n) => !n);
+    } catch (error) {
+      console.log(error);
+    }
   }
+
   let hide = "true";
 
   let menuItems = [
@@ -39,7 +38,7 @@
           {/each}
           <button
             class="right-0 absolute p-1 rounded-lg text-gray-600 dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600 fill-current"
-            on:click={() => setTheme()}
+            on:click={() => updateTheme()}
             aria-label="Change theme"
           >
             <svg
@@ -102,7 +101,7 @@
           </div>
           <button
             class="right-0 absolute p-1 mr-2 rounded-lg text-gray-600 dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600 fill-current"
-            on:click={() => setTheme()}
+            on:click={() => updateTheme()}
             aria-label="Change theme"
           >
             <svg
