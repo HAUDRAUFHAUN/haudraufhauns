@@ -4,6 +4,7 @@
   function updateTheme() {
     try {
       darkTheme.update((n) => !n);
+      console.log("Changed darkTheme to " + $darkTheme);
     } catch (error) {
       console.log(error);
     }
