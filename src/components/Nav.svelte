@@ -5,6 +5,12 @@
     try {
       darkTheme.update((n) => !n);
       console.log("Changed darkTheme to " + $darkTheme);
+
+      if ($darkTheme) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
     } catch (error) {
       console.log(error);
     }
