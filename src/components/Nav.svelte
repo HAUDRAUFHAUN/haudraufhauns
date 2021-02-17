@@ -33,40 +33,44 @@
         class="relative flex items-center justify-between sm:h-10 lg:justify-start lg:w-full"
         aria-label="Global"
       >
-        <div
-          class="hidden md:block lg:block xl:block md:ml-10 md:pr-4 md:space-x-8"
-        >
-          {#each menuItems as item}
-            <a
-              href={item.link}
-              class="font-medium text-green-500 hover:text-green-800 hover:bg-green-300 dark:text-white dark:hover:text-green-800 p-3 rounded-md"
-              >{item.name}</a
-            >
-          {/each}
-          <button
-            class="right-0 absolute p-1 rounded-lg text-gray-600 dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600 fill-current"
-            on:click={() => updateTheme()}
-            aria-label="Change theme"
+        <div class="hidden md:w-full md:flex flex-row justify-between items-center">
+          <div
+            class="hidden md:block lg:block xl:block md:ml-10 md:pr-4 md:space-x-8"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="text-black dark:text-white h-7 w-7"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="currentColor"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+            {#each menuItems as item}
+              <a
+                href={item.link}
+                class="font-medium text-green-500 hover:text-green-800 hover:bg-green-300 dark:text-white dark:hover:text-green-800 p-3 rounded-md"
+                >{item.name}</a
+              >
+            {/each}
+          </div>
+          <div class="justify-center items-center justify-self-end">
+            <button
+              class="p-2 rounded-lg text-gray-600 dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600 fill-current"
+              on:click={() => updateTheme()}
+              aria-label="Change theme"
             >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M6.8 11a6 6 0 1 0 10.396 0l-5.197 -8l-5.2 8z" />
-              <path d="M12 3v17" />
-              <path d="M12 12l3.544 -3.544" />
-              <path d="M12 17.3l5.558 -5.558" />
-            </svg>
-          </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="text-black dark:text-white h-7 w-7"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M6.8 11a6 6 0 1 0 10.396 0l-5.197 -8l-5.2 8z" />
+                <path d="M12 3v17" />
+                <path d="M12 12l3.544 -3.544" />
+                <path d="M12 17.3l5.558 -5.558" />
+              </svg>
+            </button>
+          </div>
         </div>
       </nav>
     </div>
