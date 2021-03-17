@@ -58,6 +58,7 @@ export default {
             hot: isNollup,
             preprocess: [
                 mdsvex({layout: {
+                    imprint: "./src/layouts/Imprint.svelte",
                     post: "./src/layouts/Post.svelte"
                   }}),
                 autoPreprocess({

@@ -6,6 +6,6 @@
   metatags.description = "Website of @haudraufhaun";
 </script>
 
-<h1 class="text-xl md:text-2xl lg:text-4xl">haudraufhaun</h1>
+<h1 class="text-xl md:text-2xl lg:text-4xl xl:text-5xl font-syne">haudraufhaun</h1>
 
 <Terminal />

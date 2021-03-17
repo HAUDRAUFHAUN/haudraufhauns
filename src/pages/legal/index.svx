@@ -1,0 +1,8 @@
+---
+title: "Imprint"
+layout: imprint
+---
+
+<h3 class="dark:text-white">Licenses</h3>
+
+The licenses of the used technologies are collected <a href="/legal/licenses/">here</a>

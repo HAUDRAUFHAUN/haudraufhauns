@@ -1,6 +1,6 @@
 <script>
-  import { layout, url } from "@roxi/routify";
-
+  import { layout, url, metatags } from "@roxi/routify";
+  metatags.title = "haudraufhaun - Blog"
   let posts = $layout.children;
 </script>
 

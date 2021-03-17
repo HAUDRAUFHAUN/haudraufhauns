@@ -33,10 +33,15 @@
         class="relative flex items-center justify-between sm:h-10 lg:justify-start lg:w-full"
         aria-label="Global"
       >
-        <div class="hidden md:w-full md:flex flex-row justify-between items-center">
+        <div
+          class="hidden md:w-full md:flex flex-row justify-between items-center"
+        >
           <div
             class="hidden md:block lg:block xl:block md:ml-10 md:pr-4 md:space-x-8"
           >
+            <a href="/" class="font-syne text-xl xl:text-2xl 2xl:text-3xl dark:text-white"
+              >haudraufhaun</a
+            >
             {#each menuItems as item}
               <a
                 href={item.link}
@@ -88,7 +93,7 @@
     <div class="md:hidden right-0">
       <div class:hidden={hide === "false"}>
         <div class="px-4 flex items-center justify-between">
-          <div class="-m3-2">
+          <div>
             <button
               on:click={() => (hide = "false")}
               aria-label="Toggle mobile menu"
@@ -110,8 +115,9 @@
               </svg>
             </button>
           </div>
+          <a href="/" class="font-syne text-xl p-1 dark:text-white">haudraufhaun</a>
           <button
-            class="right-0 absolute p-1 mr-2 rounded-lg text-gray-600 dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600 fill-current"
+            class="right-0 p-1 rounded-lg text-gray-600 dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600 fill-current"
             on:click={() => updateTheme()}
             aria-label="Change theme"
           >
