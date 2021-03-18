@@ -1,8 +1,8 @@
 @font-face {
-    font-family: SyneMono;
-    src: url(/fonts/SyneMono-Regular.ttf);
-  }
+  font-family: SyneMono;
+  src: url(/fonts/SyneMono-Regular.ttf);
+}
 
 .font-syne {
-    font-family: SyneMono;
+  font-family: SyneMono;
 }

@@ -6,11 +6,11 @@ layout: post
 
 Moin 👋,
 
-in diesem Blogpost soll es um den Bau einer einfachen Website mit Jekyll und das kostenlose Hosten dieser Seite mit <code class="dark:text-white">GitHub-Pages</code>.
+in diesem Blogpost soll es um den Bau einer einfachen Website mit Jekyll und das kostenlose Hosten dieser Seite mit `GitHub-Pages`.
 
-<h3 class="dark:text-white"> Vorrausetzungen </h3>
+### Vorrausetzungen
 
-Wenn du diesem Tutorial folgen willst, dannn gehe bitte sicher, dass du schon HTML beherrschst, da ich hier nicht alles darüber erklären kann. Falls du noch nicht HTML beherrschst, ist dieses Tutorial empfehlenswert: <a class="dark:text-white" href="https://www.youtube.com/watch?v=qmTNnZCDJY0">Eigene Website mit HTML und CSS bauen</a>
+Wenn du diesem Tutorial folgen willst, dannn gehe bitte sicher, dass du schon HTML beherrschst, da ich hier nicht alles darüber erklären kann. Falls du noch nicht HTML beherrschst, ist dieses Tutorial empfehlenswert: [Eigene Website mit HTML und CSS bauen](https://www.youtube.com/watch?v=qmTNnZCDJY0)
 
 Zudem erfülle bitte folgende Vorraussetzungen:
 
@@ -20,7 +20,7 @@ Zudem erfülle bitte folgende Vorraussetzungen:
 
 Du erfüllst alle Vorrausetzungen? Dann lass uns direkt starten 🚀
 
-<h2 class="dark:text-white"> Erstellen eines neuen Projektes </h2>
+## Erstellen eines neuen Projektes
 
 Um mit dem Programmieren zu beginnen, navigiere zunächst in einem Terminal in den Ordner, in dem du das Projekt erstellen möchtest. Dorthin navigiert, führe in deinem Terminal zum erstellen des Projektes den Befehl
 
@@ -94,8 +94,9 @@ Meistens sind Websites ja so aufgebaut:
 Wenn unsere Website mehrere Seiten beinhaltet, dann müssten wir rein theoretisch die Navigation und den Footer in jeder <code class="dark:text-white">HTML</code> Datei neu schreiben, was natürlich umständlich ist und bei Änderungen and diesen Komponenten schnell unübersichtlich wird, da wir die Komponente in jeder Datei dann ändern müssen.
 Doch Jekyll nimmt uns diese Arbeit mit den sogenannten <code class="dark:text-white">Includes</code> und <code class="dark:text-white">Layouts</code> ab:
 
-<h3 class="dark:text-white">Includes</h3>
-Statt in jeder Datei z.B. deie Naviation neu zu programmieren, können wir die Navbar in <b>einer</b> Datei designen und müsssen diese dann lediglich in den anderen <code class="dark:text-white">HTML</code> Dateien importieren. Der Vorteil liegt auf der Hand: Wir ändern die auf jeder Seite vorhandene Komponente wie die Navigationsbar nur in einer Datei und müssen nicht in jeder Datei diese neu programmieren. Und so gehen wir dabei vor:
+### Includes
+
+Statt in jeder Datei z.B. deie Naviation neu zu programmieren, können wir die Navbar in **einer** Datei designen und müsssen diese dann lediglich in den anderen <code class="dark:text-white">HTML</code> Dateien importieren. Der Vorteil liegt auf der Hand: Wir ändern die auf jeder Seite vorhandene Komponente wie die Navigationsbar nur in einer Datei und müssen nicht in jeder Datei diese neu programmieren. Und so gehen wir dabei vor:
 
 1. Wir erstellen einen Ordner mit dem Namen <code class="dark:text-white">\_includes</code>. Dies ist wichtig, da Jekyll nur aus einem Ordner mit <b>exakt</b> diesem Namen importieren kann
 2. Erstelle eine Datei mit dem Namen <code class="dark:text-white">\_navbar.html</code> in dem in 1. erstellten Ordner, hier werden wir die Navigationsleiste unserer Seite erstellen.

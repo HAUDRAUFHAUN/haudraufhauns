@@ -4,7 +4,7 @@
 
 <div class="w-full mx-2 my-4">
   <div
-    class="coding inverse-toggle px-5 pt-4 shadow-xl text-gray-100 text-xs md:text-base lg:text-lg font-mono subpixel-antialiased 
+    class="inverse-toggle px-5 pt-4 shadow-xl text-gray-100 text-xs md:text-base lg:text-lg font-mono subpixel-antialiased 
                 bg-gray-800 dark:bg-gray-900 pb-6 rounded-lg leading-normal overflow-hidden"
   >
     <div class="top mb-2 flex">
@@ -15,8 +15,10 @@
     <div class="mt-4 flex justify-start">
       <span class="text-green-400">computer:~$</span>
       <Typewriter cursor={false} interval={50}>
-        <p class="pl-2 typewriter">
-          echo <span class="text-yellow-300">"Hello there 👋🏻"</span>
+        <p class="pl-2 dark:text-gray-50">
+          echo <span class="text-yellow-300 dark:text-yellow-300"
+            >"Hello there 👋🏻"</span
+          >
           <br />
         </p>
       </Typewriter>
@@ -24,7 +26,9 @@
     <div class="mt-4 flex justify-start">
       <Typewriter cursor={false} interval={15} delay={2000}>
         <p class="pl-2">
-          <span class="text-yellow-300">"Hello there 👋🏻"</span>
+          <span class="text-yellow-300 dark:text-yellow-300"
+            >"Hello there 👋🏻"</span
+          >
           <br />
         </p>
       </Typewriter>
@@ -34,7 +38,7 @@
         <span class="text-green-400">computer:~$</span>
       </Typewriter>
       <Typewriter cursor={false} interval={50} delay={4000}>
-        <p class="pl-2 typewriter-2">
+        <p class="pl-2 typewriter-2 dark:text-gray-50">
           apt-get social-media
           <br />
         </p>
@@ -48,7 +52,7 @@
           <div class="flex flex-row space-y-1 md:space-x-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="text-white"
+              class="text-white dark:text-white"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -67,7 +71,7 @@
               href="https://github.com/HAUDRAUFHAUN"
               target="_blank"
               rel="noopener"
-              class="underline"
+              class="underline dark:text-gray-50"
             >
               HAUDRAUFHAUN</a
             >
@@ -94,7 +98,7 @@
               href="https://twitter.com/haudraufhaun1"
               target="_blank"
               rel="noopener"
-              class="underline"
+              class="underline dark:text-white"
             >
               @haudraufhaun1</a
             >
@@ -126,7 +130,7 @@
               href="https://reddit.com/u/haudraufhaun"
               target="_blank"
               rel="noopener"
-              class="underline"
+              class="underline dark:text-white"
             >
               u/haudraufhaun</a
             >

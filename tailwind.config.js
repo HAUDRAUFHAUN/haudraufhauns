@@ -1,16 +1,27 @@
 const production = !process.env.ROLLUP_WATCH;
 
 module.exports = {
-  darkMode: 'class',
+  darkMode: "class",
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
+  plugins: [require("nightwind"), require("@tailwindcss/typography")],
   purge: {
     content: ["./src/**/*.svelte"],
     enabled: production,
+  },
+  theme: {
+    nightwind: {
+      typography: {
+        pre: {
+          backgroundColor: "coolGray.900",
+          textColor: "coolGray.50",
+        },
+        code: {
+          textColor: "coolGray.50",
+        },
+      },
+    },
   },
 };

@@ -1,5 +1,6 @@
 <script>
-  import { darkTheme } from "@/store.js";
+  import nightwind from "nightwind/helper";
+  /*import { darkTheme } from "@/store.js";
 
   function updateTheme() {
     try {
@@ -14,7 +15,7 @@
     } catch (error) {
       console.log(error);
     }
-  }
+  }*/
 
   let hide = "true";
 
@@ -39,7 +40,9 @@
           <div
             class="hidden md:block lg:block xl:block md:ml-10 md:pr-4 md:space-x-8"
           >
-            <a href="/" class="font-syne text-xl xl:text-2xl 2xl:text-3xl dark:text-white"
+            <a
+              href="/"
+              class="font-syne text-xl xl:text-2xl 2xl:text-3xl dark:text-white"
               >haudraufhaun</a
             >
             {#each menuItems as item}
@@ -53,7 +56,7 @@
           <div class="justify-center items-center justify-self-end">
             <button
               class="p-2 rounded-lg text-gray-600 dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600 fill-current"
-              on:click={() => updateTheme()}
+              on:click={() => nightwind.toggle()}
               aria-label="Change theme"
             >
               <svg
@@ -115,10 +118,12 @@
               </svg>
             </button>
           </div>
-          <a href="/" class="font-syne text-xl p-1 dark:text-white">haudraufhaun</a>
+          <a href="/" class="font-syne text-xl p-1 dark:text-white"
+            >haudraufhaun</a
+          >
           <button
             class="right-0 p-1 rounded-lg text-gray-600 dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600 fill-current"
-            on:click={() => updateTheme()}
+            on:click={() => nightwind.toggle()}
             aria-label="Change theme"
           >
             <svg
