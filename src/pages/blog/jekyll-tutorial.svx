@@ -230,7 +230,7 @@ Daraufhin bearbeiten wir die Datei <code class="dark:text-white">default.html</c
     <br />
     <br />
   </body>
-</ht
+</html>
 ```
 
 Nun bearbeiten wir die Datei <code class="dark:text-white">index.html</code> folgendermaßen:
