@@ -16,7 +16,7 @@ module.exports = {
       typography: {
         pre: {
           backgroundColor: "coolGray.900",
-          textColor: "coolGray.50",
+          color: "coolGray.50",
         },
         code: {
           textColor: "coolGray.50",
