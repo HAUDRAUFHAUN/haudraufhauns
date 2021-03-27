@@ -2,6 +2,7 @@
 title: "Jekyll & GitHub Pages Tutorial"
 description: "Entwickeln und kostenloses Hosten einer Website mithilfe von GitHubPages und Jekyll"
 layout: post
+published: 2020-08-02
 ---
 
 Moin 👋,

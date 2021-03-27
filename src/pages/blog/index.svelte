@@ -1,7 +1,12 @@
 <script>
   import { layout, url, metatags } from "@roxi/routify";
-  metatags.title = "haudraufhaun - Blog"
-  let posts = $layout.children;
+  metatags.title = "haudraufhaun - Blog";
+
+  let rawnodes = $layout.children;
+  let posts = rawnodes.sort(
+    (a, b) =>
+      Date.parse(b.meta.frontmatter.published) - Date.parse(a.meta.frontmatter.published)
+  );
 </script>
 
 {#each posts as node}
