@@ -48,7 +48,7 @@
             {#each menuItems as item}
               <a
                 href={item.link}
-                class="font-medium text-green-500 hover:text-green-800 hover:bg-green-300 dark:text-white dark:hover:text-green-800 p-3 rounded-md"
+                class="font-medium text-green-500 hover:text-green-800 hover:bg-green-300 dark:text-white dark:hover:text-green-800 dark:hover:bg-green-300 p-3 rounded-md"
                 >{item.name}</a
               >
             {/each}
