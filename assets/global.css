@@ -1,6 +1,15 @@
 @font-face {
+  font-family: FiraCode;
+  src: url(fonts/FiraCode-Regular.ttf);
+}
+
+@font-face {
   font-family: SyneMono;
   src: url(/fonts/SyneMono-Regular.ttf);
+}
+
+.font-firacode {
+  font-family: FiraCode;
 }
 
 .font-syne {

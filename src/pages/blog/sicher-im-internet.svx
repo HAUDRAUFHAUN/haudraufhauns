@@ -1,0 +1,40 @@
+---
+title: "Sicher im Internet"
+description: "So gelingt sichere und datengeschützte Internetnutzung bei Jedem (auch bei Einsteigern)"
+layout: post
+published: 2021-03-28
+isDraft: true
+---
+
+Hier geht es um unterschiedliche Methoden, um bei der Nutzung des Internets weniger persönliche Daten zu hinterlassen und auch ein Stück weit sicherer digitale Medien nutzen zu können.
+
+> Dieser Artikel versucht möglichst unterschiedliche Erfahrungsstufen anzusprechen (totaler Anfänger bis Profi)
+
+## Suchmaschine
+
+Die bisher wohl beliebteste Suchmaschine ist `Google`. Doch Google versucht so viele Nutzerdaten wie möglich zu sammeln, um mit diesen personalisierte Werbung zu ermöglichen, damit verdiente der Konzern bis Anfang des Jahres alleine **56,9 Mrd. $** (Wobei die Werbeeinnahmen von der Suchmaschine und Youtube ungefähr 38,8 Mrd. $ betrugen). [^1]
+
+Ich denke, dass es nicht viele Leute gibt, die den Wunsch haben, viele ihrer personenbezogenen Daten großen Werbenetzwerken bereitzustellen.
+
+Eine seit 2008 existierende Firma namens `DuckDuckGo` hat es sich zum Ziel gesetzt, eine gleichnamige Suchmaschine ohne Werbetracking zu programmieren. Diese Suchmaschine speichert keine Suchanfragen oder personenbezogene Daten des Nutzers und ist unter [duckduckgo.com](https://duckduckgo.com) abrufbar.
+
+## Browser
+
+### Mobil (iOS, Android)
+
+`DuckDuckGo` hat außerdem einen Browser (`➡️ Programm um Webseiten zu nutzen`) für mobile Endgeräte (Smartphone, Tablet, iPad) entwickelt, dieser Browser blockiert standardmäßig Cookies der Werbekonzerne; ferner ist er standardmäßig so eingerichtet, dass der Benutzer seinen Verlauf sowie alle Daten, die evtl. doch beim Surfen angefallen sind, auf Knopfdrick löschen kann.
+
+### PC (Windows, MacOS, Linux)
+
+Auf dem PC ist der Browser, der aktuell die besten Möglichkeiten für Privatsphäre bietet, [Firefox](https://www.mozilla.org/de/firefox/new/). Wenn man Firefox wie folgendermaßen beschrieben einstellt, hat man einen großen Schritt in Richtung mehr Privatsphäre gemacht:
+
+1. Firefox [hier](https://www.mozilla.org/de/firefox/all/#product-desktop-release) herunterladen und installieren
+2. Die Einstellungen von Firefox öffnen (das geht u.a., indem man `about:preferences` in die obere Suchleiste eingibt) und folgende Einstellungen vornehmen:
+   - Unter `Datenschutz & Sicherheit` bei dem **Verbesserten Schutz vor Aktivitätenverfolgung** folgende Einstellungen vornehmen:
+      ![Einstellungen für den Verbesserten Schutz vor Aktivitätenverfolgung](/images/sicher-im-internet/schutz-vor-aktivitaetenverfolgung.png)
+    
+    - Unter dieser Option bei `Eine "Do Not Track" Information senden` die Option `Immer` auswählen
+
+## Browser-Erweiterungen
+
+[^1]: [spiegel.de](https://www.spiegel.de/wirtschaft/unternehmen/google-mutter-alphabet-profitiert-von-gestiegenen-werbeeinnahmen-a-e98a81ea-b570-4f30-acd2-e777d1d6a1a4)

@@ -7,7 +7,7 @@
   $: metatags.description = description;
 </script>
 
-<h1 class="text-xl md:text-2xl lg:text-4xl xl:text-5xl mb-6 pb-2 font-syne">
+<h1 class="text-xl md:text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl mb-6 pb-2 font-syne font-semibold">
   {title}
 </h1>
 <div
