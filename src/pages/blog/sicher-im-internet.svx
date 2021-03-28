@@ -3,12 +3,19 @@ title: "Sicher im Internet"
 description: "So gelingt sichere und datengeschützte Internetnutzung bei Jedem (auch bei Einsteigern)"
 layout: post
 published: 2021-03-28
-isDraft: true
 ---
 
 Hier geht es um unterschiedliche Methoden, um bei der Nutzung des Internets weniger persönliche Daten zu hinterlassen und auch ein Stück weit sicherer digitale Medien nutzen zu können.
 
+### Disclaimer:
+
 > Dieser Artikel versucht möglichst unterschiedliche Erfahrungsstufen anzusprechen (totaler Anfänger bis Profi)
+
+> Dies sind keine Affiliate- oder Werbungen für bestimmte Produkte // Firmen, sondern lediglich Empfehlungen
+
+> Die folgenden Erläuterungen haben keinen Anspruch auf Vollständigkeit
+
+> Ich bin offen für Fragen; Fehler, Anregungen etc. bitte entweder über GitHub-Issues oder per E-Mail ansprechen
 
 ## Suchmaschine
 
@@ -22,7 +29,7 @@ Eine seit 2008 existierende Firma namens `DuckDuckGo` hat es sich zum Ziel geset
 
 ### Mobil (iOS, Android)
 
-`DuckDuckGo` hat außerdem einen Browser (`➡️ Programm um Webseiten zu nutzen`) für mobile Endgeräte (Smartphone, Tablet, iPad) entwickelt, dieser Browser blockiert standardmäßig Cookies der Werbekonzerne; ferner ist er standardmäßig so eingerichtet, dass der Benutzer seinen Verlauf sowie alle Daten, die evtl. doch beim Surfen angefallen sind, auf Knopfdrick löschen kann.
+`DuckDuckGo` hat außerdem einen Browser (`➡️ Programm um Webseiten zu nutzen`) für mobile Endgeräte (Smartphone, Tablet, iPad) entwickelt, dieser Browser blockiert standardmäßig Cookies der Werbekonzerne; ferner ist er standardmäßig so eingerichtet, dass der Benutzer seinen Verlauf sowie alle Daten, die evtl. doch beim Surfen angefallen sind, auf Knopfdruck löschen kann.
 
 ### PC (Windows, MacOS, Linux)
 
@@ -30,11 +37,39 @@ Auf dem PC ist der Browser, der aktuell die besten Möglichkeiten für Privatsph
 
 1. Firefox [hier](https://www.mozilla.org/de/firefox/all/#product-desktop-release) herunterladen und installieren
 2. Die Einstellungen von Firefox öffnen (das geht u.a., indem man `about:preferences` in die obere Suchleiste eingibt) und folgende Einstellungen vornehmen:
+
+   - Ganz unten auf der `Allgemein` Seite bei `Verbindungs-Einstellungen` auf `Einstellungen...` klicken und `DNS über HTPPS aktivieren` aktivieren: [DNS über HTPPS in den Verbindungs-Einstellungen aktivieren](/images/sicher-im-internet/firefox-verbindungseinstellungen.png)
+
+   - Unter der Option `Suchmaschine` bei `Suche` DuckDuckGo als Suchmaschine auswählen
+
    - Unter `Datenschutz & Sicherheit` bei dem **Verbesserten Schutz vor Aktivitätenverfolgung** folgende Einstellungen vornehmen:
-      ![Einstellungen für den Verbesserten Schutz vor Aktivitätenverfolgung](/images/sicher-im-internet/schutz-vor-aktivitaetenverfolgung.png)
-    
-    - Unter dieser Option bei `Eine "Do Not Track" Information senden` die Option `Immer` auswählen
+     ![Einstellungen für den Verbesserten Schutz vor Aktivitätenverfolgung](/images/sicher-im-internet/schutz-vor-aktivitaetenverfolgung.png)
+
+   - Unter dieser Option bei `Eine "Do Not Track" Information senden` die Option `Immer` auswählen
+
+   - Darunter `Cookies und Website-Daten` folgendermaßen konfigurieren:
+     ![Einstellungen für Cookies und Website-Daten](/images/sicher-im-internet/cookies-und-website-daten.png)
+
+   - Ebenfalls weiter unten auf der `Datenschutz & Sicherheit` Seite bei `Datenerhebung durch Firefox und deren Verwendung` alle Optionen deaktivieren
+
+   - Die `Startseite` sollte folgendermaßen konfiguriert werden (Kann natürlich aber auch nach persönlichen Vorlieben gestaltet werden):
+     ![Einstellungen für Cdie Startseite](/images/sicher-im-internet/firefox-startseite.png)
 
 ## Browser-Erweiterungen
+
+Die Auswahl dieser Browsererweiterungen ist für PC Nutzer. Benutzer, die die `DuckDuckGo` App auf Handy oder Tablet nutzen, müssen diese Schritte nicht mehr durchführen.
+
+Verlinkt ist jeweils die Seite, über die man die Erweiterungen zu `Firefox` hinzufügen kann, d.h. zum Hinzufügen der Erweiterung einfach den Link öffnen, und dann auf den blauen `Zu Firefox hinzufügen` Button klicken
+
+- [Privacy Badger](https://addons.mozilla.org/de/firefox/addon/privacy-badger17/): Dieses Addon blockiert Drittanbietercookies, Werbung wird jedoch angezeigt, um Leuten, die auf Werbeeinnahmen angewiesen sind, nicht den Lohn ihrer oft harten Arbeit streitig zu machen
+- [HTTPS Everywhere](https://addons.mozilla.org/de/firefox/addon/https-everywhere/): Dieses Addon sorgt dafür, dass HTTPS auf allen Webseiten erzwungen wird
+
+### Passwortmanager
+
+Ein empfehlenswerter freier Passwortmanager ist [Bitwarden](https://bitwarden.com/). Bitwarden kann die Passwörter geräteübergreifend synchronisieren, sichere Passwörter generieren und ist für alle erdenklichen Plattformen erhältlich (auch als [Firefox-Erweiterung](https://addons.mozilla.org/de/firefox/addon/bitwarden-password-manager/)).
+
+<hr />
+
+**Fußnoten:**
 
 [^1]: [spiegel.de](https://www.spiegel.de/wirtschaft/unternehmen/google-mutter-alphabet-profitiert-von-gestiegenen-werbeeinnahmen-a-e98a81ea-b570-4f30-acd2-e777d1d6a1a4)
