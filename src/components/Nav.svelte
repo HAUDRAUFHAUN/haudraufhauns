@@ -25,7 +25,7 @@
   ];
 </script>
 
-<div class="max-w-full mx-auto">
+<div class="max-w-full mx-auto" id="nav">
   <div
     class="relative z-10 pb-2 bg-white dark:bg-gray-800 sm:pb-8 md:pb-10 lg:max-w-full lg:w-full lg:pb-14 xl:pb-16"
   >
@@ -205,4 +205,9 @@
 </div>
 
 <style>
+  @media print {
+    #nav {
+      display: none;
+    }
+  }
 </style>
