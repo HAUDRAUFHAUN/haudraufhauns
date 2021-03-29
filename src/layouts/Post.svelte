@@ -7,6 +7,7 @@
   $: metatags.description = description;
 </script>
 
+<div id="content">
   <h1
     class="text-xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl mb-6 pb-2 font-syne font-semibold"
   >
@@ -18,3 +19,16 @@
   >
     <slot />
   </div>
+</div>
+
+<style>
+  @media print {
+    @page {
+      margin: 0.5cm;
+    }
+    #content {
+      width: 100%;
+      -webkit-print-color-adjust: exact !important;
+    }
+  }
+</style>
