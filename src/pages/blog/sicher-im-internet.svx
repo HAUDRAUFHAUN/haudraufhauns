@@ -19,7 +19,8 @@ Hier geht es um unterschiedliche Methoden, um bei der Nutzung des Internets weni
 
 ## Suchmaschine
 
-Die bisher wohl beliebteste Suchmaschine ist `Google`. Doch Google versucht so viele Nutzerdaten wie möglich zu sammeln, um mit diesen personalisierte Werbung zu ermöglichen, damit verdiente der Konzern bis Anfang des Jahres alleine **56,9 Mrd. $** (Wobei die Werbeeinnahmen von der Suchmaschine und Youtube ungefähr 38,8 Mrd. $ betrugen). [^1]
+Die bisher wohl beliebteste Suchmaschine ist `Google`. Doch Google versucht so viele Nutzerdaten wie möglich zu sammeln, um mit diesen personalisierte Werbung zu ermöglichen, damit verdiente der Konzern bis Anfang des Jahres alleine **56,9 Mrd. $** (Wobei die Werbeeinnahmen von der Suchmaschine und Youtube ungefähr 38,8 Mrd. $ betrugen).
+[^1]
 
 Ich denke, dass es nicht viele Leute gibt, die den Wunsch haben, viele ihrer personenbezogenen Daten großen Werbenetzwerken bereitzustellen.
 
@@ -67,9 +68,5 @@ Verlinkt ist jeweils die Seite, über die man die Erweiterungen zu `Firefox` hin
 ### Passwortmanager
 
 Ein empfehlenswerter freier Passwortmanager ist [Bitwarden](https://bitwarden.com/). Bitwarden kann die Passwörter geräteübergreifend synchronisieren, sichere Passwörter generieren und ist für alle erdenklichen Plattformen erhältlich (auch als [Firefox-Erweiterung](https://addons.mozilla.org/de/firefox/addon/bitwarden-password-manager/)).
-
-<hr />
-
-**Fußnoten:**
 
 [^1]: [spiegel.de](https://www.spiegel.de/wirtschaft/unternehmen/google-mutter-alphabet-profitiert-von-gestiegenen-werbeeinnahmen-a-e98a81ea-b570-4f30-acd2-e777d1d6a1a4)
