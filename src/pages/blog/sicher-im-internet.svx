@@ -7,7 +7,7 @@ published: 2021-03-28
 
 Hier geht es um unterschiedliche Methoden, um bei der Nutzung des Internets weniger persönliche Daten zu hinterlassen und auch ein Stück weit sicherer digitale Medien nutzen zu können.
 
-### Disclaimer:
+### Disclaimer
 
 > Dieser Artikel versucht möglichst unterschiedliche Erfahrungsstufen anzusprechen (totaler Anfänger bis Profi)
 
@@ -39,8 +39,8 @@ Auf dem PC ist der Browser, der aktuell die besten Möglichkeiten für Privatsph
 1. Firefox [hier](https://www.mozilla.org/de/firefox/all/#product-desktop-release) herunterladen und installieren
 2. Die Einstellungen von Firefox öffnen (das geht u.a., indem man `about:preferences` in die obere Suchleiste eingibt) und folgende Einstellungen vornehmen:
 
-   - Ganz unten auf der `Allgemein` Seite bei `Verbindungs-Einstellungen` auf `Einstellungen...` klicken und `DNS über HTPPS aktivieren` aktivieren: 
-   ![DNS über HTPPS in den Verbindungs-Einstellungen aktivieren](/images/sicher-im-internet/firefox-verbindungseinstellungen.png)
+   - Ganz unten auf der `Allgemein` Seite bei `Verbindungs-Einstellungen` auf `Einstellungen...` klicken und `DNS über HTPPS aktivieren` aktivieren:
+     ![DNS über HTPPS in den Verbindungs-Einstellungen aktivieren](/images/sicher-im-internet/firefox-verbindungseinstellungen.png)
 
    - Unter der Option `Suchmaschine` bei `Suche` DuckDuckGo als Suchmaschine auswählen
 

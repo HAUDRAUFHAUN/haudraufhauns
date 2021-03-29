@@ -12,14 +12,29 @@ module.exports = {
     enabled: production,
   },
   theme: {
-    nightwind: {
+    extend: {
       typography: {
-        pre: {
-          backgroundColor: "coolGray.900",
-          color: "coolGray.50",
+        DEFAULT: {
+          css: {
+            mark: {
+              backgroundColor: "transparent",
+              backgroundImage:
+                "linear-gradient(to right, #FDE047, #FBBF24, #FDE047, #FBBF24, #FDE047);",
+              borderRadius: "0.375rem",
+              padding: "0.25rem",
+            },
+          },
         },
-        code: {
-          textColor: "coolGray.50",
+      },
+      nightwind: {
+        typography: {
+          pre: {
+            backgroundColor: "coolGray.900",
+            color: "coolGray.50",
+          },
+          code: {
+            textColor: "coolGray.50",
+          },
         },
       },
     },
