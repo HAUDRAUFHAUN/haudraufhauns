@@ -70,4 +70,4 @@ Verlinkt ist jeweils die Seite, über die man die Erweiterungen zu `Firefox` hin
 
 Ein empfehlenswerter freier Passwortmanager ist [Bitwarden](https://bitwarden.com/). Bitwarden kann die Passwörter geräteübergreifend synchronisieren, sichere Passwörter generieren und ist für alle erdenklichen Plattformen erhältlich (auch als [Firefox-Erweiterung](https://addons.mozilla.org/de/firefox/addon/bitwarden-password-manager/)).
 
-[^1]: [spiegel.de](https://www.spiegel.de/wirtschaft/unternehmen/google-mutter-alphabet-profitiert-von-gestiegenen-werbeeinnahmen-a-e98a81ea-b570-4f30-acd2-e777d1d6a1a4)
+[^1]: [spiegel.de ](https://www.spiegel.de/wirtschaft/unternehmen/google-mutter-alphabet-profitiert-von-gestiegenen-werbeeinnahmen-a-e98a81ea-b570-4f30-acd2-e777d1d6a1a4)

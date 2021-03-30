@@ -14,7 +14,7 @@
     {title}
   </h1>
   <div
-    class="prose md:prose-lg lg:prose-xl dark:text-white max-w-xs sm:max-w-md md:max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl"
+    class="prose-sm md:prose lg:prose-lg dark:text-white max-w-xs sm:max-w-md md:max-w-3xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl"
     id="post-content"
   >
     <slot />

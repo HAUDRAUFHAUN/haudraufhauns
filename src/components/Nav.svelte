@@ -1,21 +1,5 @@
 <script>
   import nightwind from "nightwind/helper";
-  /*import { darkTheme } from "@/store.js";
-
-  function updateTheme() {
-    try {
-      darkTheme.update((n) => !n);
-      console.log("Changed darkTheme to " + $darkTheme);
-
-      if ($darkTheme) {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  }*/
 
   let hide = "true";
 
@@ -193,7 +177,8 @@
                 <a
                   href={item.link}
                   class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-green-300 dark:text-white dark:bg-gray-800 dark:hover:bg-gray-600"
-                  role="menuitem">{item.name}</a
+                  role="menuitem"
+                  on:click={() => (hide = "true")}>{item.name}</a
                 >
               {/each}
             </div>
