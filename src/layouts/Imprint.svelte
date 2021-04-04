@@ -2,7 +2,7 @@
     import { metatags } from "@roxi/routify";
     export let title = "";
   
-    $: metatags.title = title;
+    $: metatags.title = "haudraufhaun - Impressum: " +title;
   </script>
   
   <h1 class="text-xl md:text-2xl lg:text-4xl mb-6 pb-2">{title}</h1>

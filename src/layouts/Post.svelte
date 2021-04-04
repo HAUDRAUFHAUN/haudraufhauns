@@ -3,7 +3,7 @@
   export let title,
     description = "";
 
-  $: metatags.title = title;
+  $: metatags.title = "haudraufhaun - Blog: " + title;
   $: metatags.description = description;
 </script>
 
