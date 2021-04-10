@@ -13,33 +13,33 @@
   <div
     class="relative z-10 pb-2 bg-white dark:bg-gray-800 sm:pb-8 md:pb-10 lg:max-w-full lg:w-full lg:pb-14 xl:pb-16"
   >
-    <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
+    <div class="relative px-4 pt-6 sm:px-6 lg:px-8">
       <nav
         class="relative flex items-center justify-between sm:h-10 lg:justify-start lg:w-full"
         aria-label="Global"
       >
         <div
-          class="hidden md:w-full md:flex flex-row justify-between items-center"
+          class="flex-row items-center justify-between hidden md:w-full md:flex"
         >
           <div
             class="hidden md:block lg:block xl:block md:ml-10 md:pr-4 md:space-x-8"
           >
             <a
               href="/"
-              class="font-syne text-xl xl:text-2xl 2xl:text-3xl dark:text-white"
+              class="text-xl tracking-wide font-ibm-plex-mono xl:text-2xl 2xl:text-3xl dark:text-white"
               >haudraufhaun</a
             >
             {#each menuItems as item}
               <a
                 href={item.link}
-                class="font-medium text-green-500 hover:text-green-800 hover:bg-green-300 dark:text-white dark:hover:text-green-800 dark:hover:bg-green-300 p-3 rounded-md"
+                class="p-3 font-medium text-green-500 rounded-md font-ibm-plex-mono hover:text-green-800 hover:bg-green-300 dark:text-white dark:hover:text-green-800 dark:hover:bg-green-300"
                 >{item.name}</a
               >
             {/each}
           </div>
-          <div class="justify-center items-center justify-self-end">
+          <div class="items-center justify-center justify-self-end">
             <button
-              class="p-2 rounded-lg text-gray-600 dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600 fill-current"
+              class="p-2 text-gray-600 rounded-lg fill-current dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600"
               on:click={() => nightwind.toggle()}
               aria-label="Change theme"
             >
@@ -77,17 +77,17 @@
 			From: "opacity-100 scale-100"
 			To: "opacity-0 scale-95"
 		-->
-    <div class="md:hidden right-0">
+    <div class="right-0 md:hidden">
       <div class:hidden={hide === "false"}>
-        <div class="px-4 flex items-center justify-between">
+        <div class="flex items-center justify-between px-4">
           <div>
             <button
               on:click={() => (hide = "false")}
               aria-label="Toggle mobile menu"
-              class="bg-white dark:bg-gray-800 rounded-md p-2 inline-flex items-center text-gray-400 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              class="inline-flex items-center p-2 text-gray-400 bg-white rounded-md dark:bg-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
             >
               <svg
-                class="h-6 w-6"
+                class="w-6 h-6"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -102,11 +102,11 @@
               </svg>
             </button>
           </div>
-          <a href="/" class="font-syne text-xl p-1 dark:text-white"
+          <a href="/" class="p-1 text-xl font-ibm-plex-mono dark:text-white"
             >haudraufhaun</a
           >
           <button
-            class="right-0 p-1 rounded-lg text-gray-600 dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600 fill-current"
+            class="right-0 p-1 text-gray-600 rounded-lg fill-current dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600"
             on:click={() => nightwind.toggle()}
             aria-label="Change theme"
           >
@@ -134,23 +134,23 @@
     </div>
     <div class:hidden={hide === "true"}>
       <div
-        class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+        class="absolute inset-x-0 top-0 p-2 transition origin-top-right transform md:hidden"
       >
         <div
-          class="rounded-lg shadow-md bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 overflow-hidden"
+          class="overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 ring-1 ring-black ring-opacity-5"
         >
-          <div class="px-5 pt-4 flex items-center justify-between">
+          <div class="flex items-center justify-between px-5 pt-4">
             <div class="-mr-2">
               <button
                 type="button"
                 on:click={() => (hide = "true")}
                 aria-label="Toggle mobile menu"
-                class="bg-white dark:bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-red-500 dark:text-red-300 hover:text-red-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                class="inline-flex items-center justify-center p-2 text-red-500 bg-white rounded-md dark:bg-gray-800 dark:text-red-300 hover:text-red-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
               >
                 <span class="sr-only">Close main menu</span>
                 <!-- Heroicon name: x -->
                 <svg
-                  class="h-6 w-6"
+                  class="w-6 h-6"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -176,7 +176,7 @@
               {#each menuItems as item}
                 <a
                   href={item.link}
-                  class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-green-300 dark:text-white dark:bg-gray-800 dark:hover:bg-gray-600"
+                  class="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-green-300 dark:text-white dark:bg-gray-800 dark:hover:bg-gray-600"
                   role="menuitem"
                   on:click={() => (hide = "true")}>{item.name}</a
                 >

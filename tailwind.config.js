@@ -16,6 +16,23 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
+            fontFamily: "IBM Plex Mono",
+            h1: {
+              fontWeight: "500",
+              fontFamily: "IBM Plex Mono",
+            },
+            h2: {
+              fontWeight: "500",
+              fontFamily: "IBM Plex Mono",
+            },
+            h3: {
+              fontWeight: "500",
+              fontFamily: "IBM Plex Mono",
+            },
+            h4: {
+              fontWeight: "500",
+              fontFamily: "IBM Plex Mono",
+            },
             mark: {
               backgroundColor: "transparent",
               backgroundImage:

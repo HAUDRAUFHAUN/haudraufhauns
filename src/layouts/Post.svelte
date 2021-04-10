@@ -10,12 +10,12 @@
 <div id="content" class="grid grid-cols-1 place-items-center">
   <article class="w-full md:w-5/6 lg:w-4/6 2xl:w-1/2">
     <h1
-      class="text-left text-xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl mb-6 pb-2 font-syne font-semibold text-gray-900"
+      class="pb-2 mb-6 text-xl font-semibold text-left text-gray-900 md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-ibm-plex-mono"
     >
       {title}
     </h1>
     <div
-      class="prose-sm md:prose lg:prose-lg dark:text-white max-w-xs sm:max-w-md md:max-w-3xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl"
+      class="max-w-xs prose-sm md:prose lg:prose-lg dark:text-white sm:max-w-md md:max-w-3xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl"
       id="post-content"
     >
       <slot />
