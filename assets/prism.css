@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: FiraCode;
-  src: url(fonts/FiraCode-Regular.ttf);
+  src: url(/fonts/FiraCode-Regular.ttf);
 }
 
 pre[class*="language-"] {
@@ -52,6 +52,7 @@ pre[class*="language-"] {
   white-space: normal;
   display: block;
   overflow-x: auto;
+  font-family: FiraCode;
 }
 
 :not(pre) > code[class*="language-"],
