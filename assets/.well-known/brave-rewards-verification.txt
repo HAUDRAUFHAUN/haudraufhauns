@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: haudraufhauns.vercel.app
+Token: c263bb412420f16912301dcd63dbe5dde8ac72c45fa87f8d8fc6a760017a473a
