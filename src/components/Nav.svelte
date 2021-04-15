@@ -39,28 +39,24 @@
           </div>
           <div class="items-center justify-center justify-self-end">
             <button
-              class="p-2 text-gray-600 rounded-lg fill-current dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600"
+              class="grid p-2 text-gray-600 rounded-full place-items-center dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none"
               on:click={() => nightwind.toggle()}
               aria-label="Change theme"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="text-black dark:text-white h-7 w-7"
+                class="m-auto text-black dark:text-white h-7 w-7"
                 width="24"
                 height="24"
-                viewBox="0 0 24 24"
                 stroke-width="2"
                 stroke="currentColor"
                 fill="none"
                 stroke-linecap="round"
                 stroke-linejoin="round"
+                ><path d="M0 0h24v24H0z" stroke="none" /><path
+                  d="M6.8 11a6 6 0 1010.396 0l-5.197-8-5.2 8zM12 3v17M12 12l3.544-3.544M12 17.3l5.558-5.558"
+                /></svg
               >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M6.8 11a6 6 0 1 0 10.396 0l-5.197 -8l-5.2 8z" />
-                <path d="M12 3v17" />
-                <path d="M12 12l3.544 -3.544" />
-                <path d="M12 17.3l5.558 -5.558" />
-              </svg>
             </button>
           </div>
         </div>
@@ -92,21 +88,20 @@
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-              >
-                <path
+                ><path
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
                   d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
+                /></svg
+              >
             </button>
           </div>
           <a href="/" class="p-1 text-xl font-ibm-plex-mono dark:text-white"
             >haudraufhaun</a
           >
           <button
-            class="right-0 p-1 text-gray-600 rounded-lg fill-current dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600"
+            class="right-0 grid p-1 text-gray-600 rounded-full fill-current place-items-center dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none"
             on:click={() => nightwind.toggle()}
             aria-label="Change theme"
           >
@@ -115,19 +110,15 @@
               class="text-black dark:text-white h-7 w-7"
               width="24"
               height="24"
-              viewBox="0 0 24 24"
               stroke-width="2"
               stroke="currentColor"
               fill="none"
               stroke-linecap="round"
               stroke-linejoin="round"
+              ><path d="M0 0h24v24H0z" stroke="none" /><path
+                d="M6.8 11a6 6 0 1010.396 0l-5.197-8-5.2 8zM12 3v17M12 12l3.544-3.544M12 17.3l5.558-5.558"
+              /></svg
             >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M6.8 11a6 6 0 1 0 10.396 0l-5.197 -8l-5.2 8z" />
-              <path d="M12 3v17" />
-              <path d="M12 12l3.544 -3.544" />
-              <path d="M12 17.3l5.558 -5.558" />
-            </svg>
           </button>
         </div>
       </div>
@@ -156,14 +147,13 @@
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   aria-hidden="true"
-                >
-                  <path
+                  ><path
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
                     d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
+                  /></svg
+                >
               </button>
             </div>
           </div>
