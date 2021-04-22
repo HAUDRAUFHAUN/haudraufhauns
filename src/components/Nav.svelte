@@ -1,7 +1,24 @@
 <script>
+  import { draw } from "svelte/transition";
+  import { sineIn } from "svelte/easing";
   import nightwind from "nightwind/helper";
-
+  import { darkTheme } from "@/store.js";
   let hide = "true";
+
+  function setTheme() {
+    try {
+      darkTheme.update((n) => !n);
+      if (document.documentElement.classList.contains("dark")) {
+        console.log($darkTheme);
+        nightwind.toggle();
+      } else {
+        console.log($darkTheme);
+        nightwind.toggle();
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   let menuItems = [
     { link: "/", name: "Home" },
@@ -40,22 +57,36 @@
           <div class="items-center justify-center justify-self-end">
             <button
               class="right-0 flex items-center p-1 text-gray-600 rounded-lg fill-current focus:outline-none place-self-end dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600"
-              on:click={() => nightwind.toggle()}
+              on:click={() => setTheme()}
               aria-label="Change theme"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="self-center text-black w-7 h-7 dark:text-white"
+                class="self-center text-yellow-400 stroke-current w-7 h-7 dark:text-blue-300"
                 stroke-width="2"
                 stroke="currentColor"
                 fill="none"
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 viewBox="0 0 24 24"
-                ><path d="M0 0h24v24H0z" stroke="none" /><path
-                  d="M6.8 11a6 6 0 1010.396 0l-5.197-8-5.2 8zM12 3v17M12 12l3.544-3.544M12 17.3l5.558-5.558"
-                /></svg
               >
+                {#if $darkTheme}
+                  <path d="M0 0h24v24H0z" stroke="none" /><path
+                    in:draw={{ easing: sineIn }}
+                    d="M12 3h.393a7.5 7.5 0 007.92 12.446A9 9 0 1112 2.992zM17 4a2 2 0 002 2 2 2 0 00-2 2 2 2 0 00-2-2 2 2 0 002-2M19 11h2m-1-1v2"
+                  />
+                {:else}
+                  <path d="M0 0h24v24H0z" stroke="none" /><circle
+                    in:draw={{ easing: sineIn }}
+                    cx="12"
+                    cy="12"
+                    r="3"
+                  /><path
+                    in:draw={{ easing: sineIn }}
+                    d="M6 6h3.5L12 3.5 14.5 6H18v3.5l2.5 2.5-2.5 2.5V18h-3.5L12 20.5 9.5 18H6v-3.5L3.5 12 6 9.5z"
+                  />
+                {/if}
+              </svg>
             </button>
           </div>
         </div>
