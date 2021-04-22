@@ -39,20 +39,19 @@
           </div>
           <div class="items-center justify-center justify-self-end">
             <button
-              class="grid p-2 text-gray-600 rounded-full place-items-center dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none"
+              class="right-0 flex items-center p-1 text-gray-600 rounded-lg fill-current focus:outline-none place-self-end dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600"
               on:click={() => nightwind.toggle()}
               aria-label="Change theme"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="m-auto text-black dark:text-white h-7 w-7"
-                width="24"
-                height="24"
+                class="self-center text-black w-7 h-7 dark:text-white"
                 stroke-width="2"
                 stroke="currentColor"
                 fill="none"
                 stroke-linecap="round"
                 stroke-linejoin="round"
+                viewBox="0 0 24 24"
                 ><path d="M0 0h24v24H0z" stroke="none" /><path
                   d="M6.8 11a6 6 0 1010.396 0l-5.197-8-5.2 8zM12 3v17M12 12l3.544-3.544M12 17.3l5.558-5.558"
                 /></svg
@@ -107,14 +106,13 @@
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="text-black dark:text-white h-7 w-7"
-              width="24"
-              height="24"
+              class="w-6 h-6 text-black dark:text-white"
               stroke-width="2"
               stroke="currentColor"
               fill="none"
               stroke-linecap="round"
               stroke-linejoin="round"
+              viewBox="0 0 24 24"
               ><path d="M0 0h24v24H0z" stroke="none" /><path
                 d="M6.8 11a6 6 0 1010.396 0l-5.197-8-5.2 8zM12 3v17M12 12l3.544-3.544M12 17.3l5.558-5.558"
               /></svg
