@@ -9,10 +9,10 @@
     try {
       darkTheme.update((n) => !n);
       if (document.documentElement.classList.contains("dark")) {
-        console.log($darkTheme);
+        // console.log($darkTheme);
         nightwind.toggle();
       } else {
-        console.log($darkTheme);
+        // console.log($darkTheme);
         nightwind.toggle();
       }
     } catch (error) {
