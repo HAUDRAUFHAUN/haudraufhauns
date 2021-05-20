@@ -1,0 +1,43 @@
+---
+title: "How to create an .dmg installer for an macOS app"
+description: "A little tutorial about creating an .dmg installer for macOS apps"
+layout: post
+published: 2021-05-20
+---
+
+When you've created an macOS app, you want to distribute it. The 'standardized' way to do that, is publishing the app with the Mac AppStore. One restriction of that is, that you have to pay the Apple developer subscribtion for that, what could be a problem for decentralized community-organized (open-source) projects.
+
+Anyways, it's possible to just upload the app to the web, so that the users can download and install it. Just uploading the (zipped) app bundle isn't that beautiful, so this blogpost will give you a quick guide of creating an installer for your macOS app.
+
+When you got stuck about something, reach me out [on twitter](https://twitter.com/haudraufhaun1) or [GitHub](https://github.com/HAUDRAUFHAUN/) (just open up an issue at the [repository of my website](https://github.com/HAUDRAUFHAUN/haudraufhauns))
+
+## prerequisites
+
+You need following prerequisites
+
+- your build app bundle (save/copy it to the desktop for better handling)
+- an background image for the installer (I'll attach the image I use and a link to the figma design of it)
+- a Mac (with macOS)
+
+## creating the installer
+
+To create the installer, we will create a volume with `Disk Utility` and add a background-image, the app bundle and an alias of the `Applications` folder to it:
+
+1. Open `Disk Utility`
+2. Create a new Image with `File > New Image > Blank image` (alternatively you can use the keyboard shortcut `⌘N`)
+3. Name the installer whatever you want and save it to the desktop
+   ![screenshot of creating the dmg file](/images/create-macos-installer/create-dmg.png)
+4. Open up the mounted volume (the system auto-opened the dmg you created) and drag your background image into it:
+   ![screencast of copying the background image](/images/create-macos-installer/copy-bg-image.gif)
+5. For the next step, do `Right click > Show view options` in the window of the volume and set the background image you copied into the volume as background picture:
+   ![screencast of setting the background image](/images/create-macos-installer/set-bg-image.gif)
+6. After that, make an alias of your applications folder and save that to the volume
+7. Now you can also drag & drop your app bundle into the volume and position it left of the arrow; the Alias should be right of the arrow
+8. Delete the background image file that's inside the volume
+9. Open `Disk Utility` and select the Container Disk which contains the mounted installer volume (in my case the installer volume is called `MyInstaller`)
+10. Create another new Image with `File > New Image > Image from container disk xx` (the xx might represent figures that are the end of the name from the container disk); Ensure at the creation, that you create an READ-ONLY image.
+11. Open up the image you've created in step 10.
+
+When everything is ok, you finished the macOS installer for your app. Congratulations! 🎉
+
+<div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe rel="prefetch" src="https://giphy.com/embed/Q81NcsY6YxK7jxnr4v" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/moodman-Q81NcsY6YxK7jxnr4v">via GIPHY</a></p>
