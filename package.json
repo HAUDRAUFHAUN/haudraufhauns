@@ -72,6 +72,6 @@
     ]
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.4.0"
+    "@tailwindcss/typography": "^0.4.1"
   }
 }
