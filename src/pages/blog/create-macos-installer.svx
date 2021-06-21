@@ -40,4 +40,4 @@ To create the installer, we will create a volume with `Disk Utility` and add a b
 
 When everything is ok, you finished the macOS installer for your app. Congratulations! 🎉
 
-<div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe rel="prefetch" src="https://giphy.com/embed/Q81NcsY6YxK7jxnr4v" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/moodman-Q81NcsY6YxK7jxnr4v">via GIPHY</a></p>
+<div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe title="success-kid" rel="prefetch" src="https://giphy.com/embed/Q81NcsY6YxK7jxnr4v" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/moodman-Q81NcsY6YxK7jxnr4v">via GIPHY</a></p>
