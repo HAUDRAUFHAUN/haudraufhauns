@@ -1,4 +1,4 @@
-# haudraufhauns
+# haudraufhauns 🌐
 
 My personal website based on [Routify](https://github.com/sveltech/routify).
 
