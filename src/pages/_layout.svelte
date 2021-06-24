@@ -6,7 +6,7 @@
 <div class="dark:bg-gray-800">
   <Nav />
   <main
-    class="dark:bg-gray-800 dark:text-white p-4 m-4 md:mx-11 md:px-11 box relative  max-w-full min-h-screen"
+    class="relative max-w-full min-h-screen p-4 m-4 dark:bg-gray-800 dark:text-white md:mx-11 md:px-11 box"
   >
     <slot />
   </main>

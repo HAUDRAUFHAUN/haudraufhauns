@@ -23,12 +23,13 @@
   let menuItems = [
     { link: "/", name: "Home" },
     { link: "/blog", name: "Blog" },
+    { link: "/portfolio", name: "Portfolio" },
   ];
 </script>
 
 <div class="max-w-full mx-auto" id="nav">
   <div
-    class="relative z-10 pb-2 bg-white dark:bg-gray-800 sm:pb-8 md:pb-10 lg:max-w-full lg:w-full lg:pb-14 xl:pb-16"
+    class="relative z-10 pb-2 bg-green-50 dark:bg-gray-800 sm:pb-8 md:pb-10 lg:max-w-full lg:w-full lg:pb-14 xl:pb-16"
   >
     <div class="relative px-4 pt-6 sm:px-6 lg:px-8">
       <nav
