@@ -111,7 +111,7 @@
             <button
               on:click={() => (hide = "false")}
               aria-label="Toggle mobile menu"
-              class="inline-flex items-center p-2 text-gray-400 bg-white rounded-md dark:bg-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              class="inline-flex items-center p-2 text-gray-400 rounded-md bg-green-50 dark:bg-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
             >
               <svg
                 class="w-6 h-6"
@@ -158,7 +158,7 @@
         class="absolute inset-x-0 top-0 p-2 transition origin-top-right transform md:hidden"
       >
         <div
-          class="overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 ring-1 ring-black ring-opacity-5"
+          class="overflow-hidden rounded-lg shadow-md bg-green-50 dark:bg-gray-800 ring-1 ring-black ring-opacity-5"
         >
           <div class="flex items-center justify-between px-5 pt-4">
             <div class="-mr-2">
@@ -166,7 +166,7 @@
                 type="button"
                 on:click={() => (hide = "true")}
                 aria-label="Toggle mobile menu"
-                class="inline-flex items-center justify-center p-2 text-red-500 bg-white rounded-md dark:bg-gray-800 dark:text-red-300 hover:text-red-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                class="inline-flex items-center justify-center p-2 text-red-500 rounded-md bg-green-50 dark:bg-gray-800 dark:text-red-300 hover:text-red-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
               >
                 <span class="sr-only">Close main menu</span>
                 <!-- Heroicon name: x -->
